@@ -7,155 +7,142 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-serif { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
     </style>
 </head>
 <body class="bg-[#fcfbfa] text-slate-800 antialiased">
 
-    <!-- HEADER / NAVBAR -->
     <header class="w-full bg-[#0f172a] border-b border-slate-800 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col lg:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-2">
-                <span class="text-white font-serif text-xl tracking-wider font-bold">SEMPRE PERTO <span class="text-[#d4af37]">SÊNIOR</span></span>
+                <span class="text-white font-serif text-2xl tracking-wider font-bold">SEMPRE PERTO <span class="text-[#d4af37]">SÊNIOR</span></span>
             </div>
             <nav class="flex flex-wrap justify-center gap-6 text-sm font-medium text-slate-300">
+                <a href="index.html" class="text-[#d4af37] border-b border-[#d4af37] pb-1 font-semibold">Home</a>
                 <a href="consultas-exames.html" class="hover:text-[#d4af37] transition">Consultas e Exames</a>
                 <a href="apoio-hospitalar.html" class="hover:text-[#d4af37] transition">Apoio Hospitalar</a>
                 <a href="turismo-senior.html" class="hover:text-[#d4af37] transition">Passeios e Lazer</a>
             </nav>
-            <!-- BOTÃO 1 DE 5: WHATSAPP DE CONTATO IMEDIATO -->
-            <a href="https://wa.me/5512991845196?text=Olá!%20Gostaria%20de%20solicitar%20uma%20assistência%20particular%20da%20Sempre%20Perto." target="_blank" class="inline-flex items-center gap-2 bg-transparent border border-[#d4af37] text-[#d4af37] px-5 py-2 rounded-md text-sm font-medium hover:bg-[#d4af37] hover:text-slate-900 transition-all duration-300">
-                Chamar no WhatsApp
+            <a href="https://wa.me/5512991845196?text=Olá!%20Desejo%20contratar%20a%20assistência%20particular%20da%20Sempre%20Perto." target="_blank" class="inline-flex items-center gap-2 bg-[#d4af37] text-slate-950 px-5 py-2 rounded-md text-xs uppercase tracking-wider font-bold hover:bg-[#c5a059] transition-all duration-300 shadow-md">
+                Contratar Assistência Imediata
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative py-20 px-4 max-w-5xl mx-auto text-center">
-        <p class="text-[#d4af37] font-semibold tracking-widest text-xs uppercase mb-3">Hospitalidade, Conexão e Assistência Particular em Taubaté</p>
+    <section class="relative py-24 px-4 max-w-5xl mx-auto text-center">
+        <p class="text-[#d4af37] font-semibold tracking-widest text-xs uppercase mb-4">Hospitalidade, Conexão e Assistência Particular em Taubaté</p>
         <h1 class="text-4xl md:text-6xl font-serif text-[#0f172a] mb-6 leading-tight font-bold">
             Seus pais não precisam abrir mão da liberdade. <br class="hidden md:inline">E você não precisa parar a sua vida para protegê-los.
         </h1>
         <p class="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-            Envelhecer com dignidade significa continuar tendo acesso às melhores experiências da vida. A Sempre Perto une o acolhimento atento de um cuidado familiar à sofisticação de um serviço de Assistência Particular Executiva.
+            Envelhecer com dignidade significa continuar tendo acesso às melhores experiências da vida. A Sempre Perto une o <strong>acolhimento atento</strong> de um cuidado familiar à sofisticação de um serviço de <strong>Assistência Particular Executiva</strong>.
         </p>
         
-        <!-- PROMPT DE IMAGEM HERO: "An elegant elder person looking out the window of a luxury clean car, smiling, soft warm sunlight, cinematic photography, high resolution" -->
-        <div class="mb-10 max-w-3xl mx-auto rounded-lg overflow-hidden shadow-xl border border-slate-200">
-            <img src="imagem-hero-home.jpg" alt="Hospitalidade Sênior Sempre Perto" class="w-full h-80 object-cover bg-slate-200">
+        <div class="mb-12 max-w-3xl mx-auto rounded-lg overflow-hidden shadow-xl border border-slate-200">
+            <img src="imagem-hero-home.jpg" alt="Hospitalidade Sênior Sempre Perto" class="w-full h-96 object-cover bg-slate-200">
         </div>
 
-        <!-- BOTÃO 2 DE 5: WHATSAPP HERO -->
-        <a href="https://wa.me/5512991845196?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20particular%20da%20Sempre%20Perto%20Sênior." target="_blank" class="inline-flex items-center gap-3 bg-[#0f172a] text-[#d4af37] px-8 py-4 rounded-md font-semibold text-base shadow-lg hover:bg-slate-800 transition-all duration-300">
-            Agendar Atendimento Particular via WhatsApp
+        <a href="https://wa.me/5512991845196?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20particular%20da%20Sempre%20Perto%20Sênior." target="_blank" class="inline-flex items-center gap-3 bg-[#0f172a] text-[#d4af37] px-8 py-4 rounded-md font-bold text-base shadow-lg hover:bg-slate-800 transition-all duration-300">
+            Bloquear Minha Escala no Cronograma Particular
         </a>
     </section>
 
-    <!-- O CONTRAS-EXEMPLO -->
-    <section class="bg-slate-50 py-20 px-4 border-y border-slate-100">
+    <section class="bg-slate-50 py-24 px-4 border-y border-slate-200/60">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-5">
-                <h2 class="text-3xl font-serif text-[#0f172a] leading-tight font-bold">
+                <h2 class="text-4xl font-serif text-[#0f172a] leading-tight font-bold">
                     O carinho de uma família com a segurança de uma estrutura profissional.
                 </h2>
                 <div class="w-16 h-1 bg-[#d4af37] mt-4"></div>
             </div>
             <div class="md:col-span-7 space-y-6 text-slate-600 font-light leading-relaxed text-base">
                 <p>
-                    Nós sabemos como é difícil. Você está no meio de um dia cheio no trabalho, gerenciando sua empresa ou fechando um negócio, e lembra que seu pai ou sua mãe têm uma consulta importante. Você quer estar presente, mas interromper compromissos profissionais gera um desgaste enorme.
+                    Nós sabemos como é difícil. Você está no meio de um dia cheio no trabalho, gerenciando sua empresa ou fechando um negócio, e lembra que seu pai ou sua mãe têm uma consulta importante. Você quer estar presente, mas <strong>interromper compromissos profissionais gera um desgaste enorme</strong> na sua produtividade.
                 </p>
                 <p>
-                    Chamar um motorista de aplicativo comum coloca quem você ama em um deslocamento impessoal. Os motoristas convencionais não ajudam a caminhar, não esperam na calçada e não entram nos locais. Para os pais, essa perda de liberdade traz estresse e o sentimento doloroso de dependência.
+                    Chamar um motorista de aplicativo comum coloca quem você ama em um <u>deslocamento frio e impessoal</u>. Os motoristas convencionais não ajudam a caminhar, não esperam na calçada e não entram nos locais. Para os pais, essa perda de liberdade traz estresse e o <strong>sentimento doloroso de dependência</strong>.
                 </p>
                 <p class="text-[#0f172a] font-medium">
-                    A Sempre Perto assume os compromissos de rua e os horários dos seus pais para você trabalhar com foco total. Entregamos presença humana, respeito absoluto à história do idoso e total alívio mental para você.
+                    A Sempre Perto assume os compromissos de rua e os horários dos seus pais para você trabalhar com foco total. Entregamos <strong>presença humana qualificada</strong>, respeito absoluto à história do idoso e <u>total alívio mental</u> para você.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- NOSSOS SERVIÇOS (LINKS DIRETOS) -->
-    <section class="py-20 px-4 max-w-5xl mx-auto">
+    <section class="py-24 px-4 max-w-5xl mx-auto">
         <div class="text-center mb-16">
-            <h2 class="text-3xl font-serif text-[#0f172a] font-bold">Soluções Completas de Acompanhamento</h2>
-            <p class="text-slate-500 font-light mt-2">Clique na modalidade desejada para conhecer nossos protocolos específicos.</p>
+            <h2 class="text-4xl font-serif text-[#0f172a] font-bold">Soluções Completas de Acompanhamento</h2>
+            <p class="text-slate-500 font-light mt-2">Selecione a modalidade desejada para acessar nossos protocolos técnicos específicos.</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <a href="consultas-exames.html" class="bg-white p-8 rounded-lg border border-slate-200 hover:border-[#d4af37] transition group block shadow-sm">
-                <h3 class="text-xl font-serif text-[#0f172a] mb-3 font-semibold group-hover:text-[#d4af37]">Consultas e Exames →</h3>
-                <p class="text-slate-600 font-light text-sm leading-relaxed">Logística completa de porta a porta, check-in burocrático e monitoramento atento na sala de espera das clínicas de Taubaté.</p>
+            <a href="consultas-exames.html" class="bg-white p-8 rounded-lg border border-slate-200 hover:border-[#d4af37] transition-all duration-300 group block shadow-sm hover:shadow-md">
+                <h3 class="text-2xl font-serif text-[#0f172a] mb-3 font-semibold group-hover:text-[#d4af37]">Consultas e Exames →</h3>
+                <p class="text-slate-600 font-light text-sm leading-relaxed">Logística completa de porta a porta, <strong>liderança burocrática</strong> em recepções e monitoramento atento na sala de espera das clínicas de Taubaté.</p>
             </a>
-            <a href="apoio-hospitalar.html" class="bg-white p-8 rounded-lg border border-slate-200 hover:border-[#d4af37] transition group block shadow-sm">
-                <h3 class="text-xl font-serif text-[#0f172a] mb-3 font-semibold group-hover:text-[#d4af37]">Apoio Hospitalar →</h3>
-                <p class="text-slate-600 font-light text-sm leading-relaxed">Companhia ativa na poltrona do quarto durante internações ou pós-operatórios, garantindo suporte e atualizações constantes.</p>
+            <a href="apoio-hospitalar.html" class="bg-white p-8 rounded-lg border border-slate-200 hover:border-[#d4af37] transition-all duration-300 group block shadow-sm hover:shadow-md">
+                <h3 class="text-2xl font-serif text-[#0f172a] mb-3 font-semibold group-hover:text-[#d4af37]">Apoio Hospitalar →</h3>
+                <p class="text-slate-600 font-light text-sm leading-relaxed"><strong>Companhia ativa na poltrona do quarto</strong> durante internações ou períodos pós-operatórios, garantindo suporte e atualizações constantes.</p>
             </a>
-            <a href="turismo-senior.html" class="bg-white p-8 rounded-lg border border-slate-200 hover:border-[#d4af37] transition group block shadow-sm">
-                <h3 class="text-xl font-serif text-[#0f172a] mb-3 font-semibold group-hover:text-[#d4af37]">Passeios e Lazer sênior →</h3>
-                <p class="text-slate-600 font-light text-sm leading-relaxed">Roteiros exclusivos de hospitalidade e cultura para a terceira idade, promovendo inclusão e conexão social com segurança.</p>
+            <a href="turismo-senior.html" class="bg-white p-8 rounded-lg border border-slate-200 hover:border-[#d4af37] transition-all duration-300 group block shadow-sm hover:shadow-md">
+                <h3 class="text-2xl font-serif text-[#0f172a] mb-3 font-semibold group-hover:text-[#d4af37]">Passeios e Lazer →</h3>
+                <p class="text-slate-600 font-light text-sm leading-relaxed">Roteiros exclusivos de <strong>turismo de hospitalidade</strong> para a terceira idade, promovendo inclusão, segurança executiva e conexão social ativa.</p>
             </a>
         </div>
 
         <div class="text-center mt-12">
-            <!-- BOTÃO 3 DE 5: WHATSAPP SERVIÇOS -->
-            <a href="https://wa.me/5512991845196?text=Olá!%20Gostaria%20de%20entender%20as%20modalidades%20de%20atendimento%20da%20Sempre%20Perto." target="_blank" class="inline-flex items-center gap-2 bg-transparent border-2 border-[#0f172a] text-[#0f172a] px-6 py-3 rounded-md font-medium hover:bg-[#0f172a] hover:text-white transition-all">
-                Falar com a Coordenação de Campo via WhatsApp
+            <a href="https://wa.me/5512991845196?text=Olá!%20Gostaria%20de%20entender%20as%20modalidades%20de%20atendimento%20da%20Sempre%20Perto." target="_blank" class="inline-flex items-center gap-2 bg-transparent border-2 border-[#0f172a] text-[#0f172a] px-6 py-3 rounded-md font-bold text-sm uppercase tracking-wider hover:bg-[#0f172a] hover:text-white transition-all">
+                Solicitar Escala Especial de Atendimento
             </a>
         </div>
     </section>
 
-    <!-- QUEM CUIDA DE QUEM VOCÊ AMA (CURRÍCULO DOS PROPRIETÁRIOS) -->
-    <section class="bg-slate-50 py-20 px-4 border-t border-slate-200">
+    <section class="bg-slate-50 py-24 px-4 border-t border-slate-200">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-serif text-[#0f172a] font-bold">Quem Cuida de Quem Você Ama</h2>
+                <h2 class="text-4xl font-serif text-[#0f172a] font-bold">Quem Cuida de Quem Você Ama</h2>
                 <p class="text-slate-500 font-light mt-2">Maturidade, sensibilidade e responsabilidade técnica em campo.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- PROPRIETÁRIO 1 -->
                 <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col items-center text-center">
-                    <!-- PROMPT DE IMAGEM FOTO: "A professional handsome Brazilian man in his late 30s, warm friendly smile, psychoanalyst and professional coach executive style, clean background" -->
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 bg-slate-200 border-2 border-[#d4af37]">
                         <img src="foto-douglas.jpg" alt="Douglas Yuri" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-serif text-[#0f172a] font-bold">Douglas Yuri</h3>
-                    <p class="text-[#d4af37] text-sm font-medium mb-3">Diretor de Operações e Psicanalista</p>
+                    <h3 class="text-2xl font-serif text-[#0f172a] font-bold">Douglas Yuri</h3>
+                    <p class="text-[#d4af37] text-sm font-semibold mb-3">Diretor de Operações e Psicanalista</p>
                     <p class="text-slate-600 font-light text-sm leading-relaxed">
-                        Estrategista de Identidade Profissional e Psicanalista clínico. Utiliza sua maturidade e escuta qualificada para oferecer uma presença calma, firme e acolhedora, gerenciando a inteligência social e a segurança da rotina dos passageiros seniores.
+                        Estrategista de Identidade Profissional e Psicanalista clínico. Utiliza sua <strong>maturidade e escuta qualificada</strong> para oferecer uma presença calma, firme e acolhedora, gerenciando com rigor a <u>inteligência social</u> e a segurança operacional dos passageiros seniores.
                     </p>
                 </div>
-                <!-- PROPRIETÁRIO 2 -->
                 <div class="bg-white p-8 rounded-lg border border-slate-200 shadow-sm flex flex-col items-center text-center">
-                    <!-- PROMPT DE IMAGEM FOTO: "A gentle mature Brazilian woman in her late 50s, friendly eyes, welcoming maternal smile, professional culinary and hospitality expert profile" -->
                     <div class="w-32 h-32 rounded-full overflow-hidden mb-4 bg-slate-200 border-2 border-[#d4af37]">
                         <img src="foto-mae.jpg" alt="Coordenação de Hospitalidade" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-xl font-serif text-[#0f172a] font-bold">Coordenação de Hospitalidade</h3>
-                    <p class="text-[#d4af37] text-sm font-medium mb-3">Especialista em Atendimento Sênior</p>
+                    <h3 class="text-2xl font-serif text-[#0f172a] font-bold">Coordenação de Hospitalidade</h3>
+                    <p class="text-[#d4af37] text-sm font-semibold mb-3">Especialista em Atendimento Sênior</p>
                     <p class="text-slate-600 font-light text-sm leading-relaxed">
-                        Graduada em Gastronomia e especialista em hotelaria assistencial. Responsável direta pela dinâmica de bem-estar a bordo, acolhimento térmico e suporte de conforto físico e emocional dos idosos durante os trajetos e vivências.
+                        Graduada em Gastronomia e especialista em hotelaria assistencial sênior. Responsável direta pela <strong>dinâmica de bem-estar a bordo</strong>, acolhimento térmico e suporte de conforto físico e emocional dos idosos durante todos os trajetos externos e vivências coletivas.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMPLIANCE / TABELA -->
     <section class="py-20 px-4 max-w-4xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-2xl font-serif text-[#0f172a] font-bold">Transparência e Limites de Atuação</h2>
-            <p class="text-slate-500 font-light mt-1 text-sm">Seguimos processos claros e rígidos para a total segurança de todas as partes envolvidas.</p>
+            <h2 class="text-3xl font-serif text-[#0f172a] font-bold">Transparência e Diretrizes Operacionais</h2>
+            <p class="text-slate-500 font-light mt-1 text-sm">Seguimos processos claros para a total segurança de todas as partes envolvidas.</p>
         </div>
         <div class="overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
             <table class="w-full text-left text-sm">
                 <thead class="bg-slate-900 text-xs uppercase text-slate-300 border-b border-slate-800">
                     <tr>
-                        <th class="px-6 py-4 font-medium text-emerald-400">🟢 O que realizamos com total dedicação</th>
-                        <th class="px-6 py-4 font-medium text-rose-400">🔴 O que NÃO realizamos (Restrições Absolutas)</th>
+                        <th class="px-6 py-4 font-semibold text-emerald-400">🟢 Realizamos com total dedicação</th>
+                        <th class="px-6 py-4 font-semibold text-rose-400">🔴 NÃO Realizamos (Restrições Absorvidas)</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100 text-slate-600 font-light">
@@ -164,7 +151,7 @@
                         <td class="px-6 py-4">• Ministração ou aplicação de qualquer tipo de medicamento.</td>
                     </tr>
                     <tr>
-                        <td class="px-6 py-4">• Gestão burocrática em recepções, senhas e check-in.</td>
+                        <td class="px-6 py-4">• Gestão burocrática em recepções, senhas e check-in clínico.</td>
                         <td class="px-6 py-4">• Procedimentos técnicos de saúde, enfermagem ou higiene íntima.</td>
                     </tr>
                 </tbody>
@@ -172,39 +159,72 @@
         </div>
     </section>
 
-    <!-- GARANTIA -->
-    <section class="bg-slate-900 text-white py-20 px-4 text-center">
+    <section class="bg-slate-900 text-white py-24 px-4 text-center">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-serif text-[#d4af37] mb-4 font-bold">Nossa reputação se apoia no método, não em promessas vagas</h2>
+            <h2 class="text-4xl font-serif text-[#d4af37] mb-4 font-bold">Sua Confiança Respaldada por Métodos Rígidos</h2>
             <p class="text-slate-400 font-light max-w-2xl mx-auto mb-8 text-base">
-                Convidamos você a tomar uma decision totalmente informada a partir de uma experiência prática por dentro dos nossos processos.
+                Convidamos você a tomar uma decisão amparada pela segurança de um processo de risco zero.
             </p>
             <div class="bg-slate-800 p-6 rounded-lg border-l-4 border-[#d4af37] text-left max-w-2xl mx-auto mb-10">
                 <p class="text-slate-300 italic font-light leading-relaxed">
-                    "Se durante a execução de qualquer atendimento você avaliar que nossa equipe falhou em entregar a hospitalidade prometida ou descumpriu nossos protocolos de segurança, nós devolvemos o valor do bloco de horas integralmente, via PIX, sem perguntas. O risco é inteiramente nosso."
+                    "Se durante a execução de qualquer atendimento você avaliar que nossa equipe falhou em entregar a hospitalidade prometida ou descumpriu nossos protocolos de segurança, nós devolvemos o valor investido integralmente, via PIX, sem perguntas. O risco é inteiramente nosso."
                 </p>
             </div>
-            <!-- BOTÃO 4 DE 5: WHATSAPP GARANTIA -->
-            <a href="https://wa.me/5512991845196?text=Olá!%20Fiquei%20interessado%20na%20proposta%20e%20gostaria%20de%20experimentar%20o%20serviço%20sem%20risco." target="_blank" class="inline-flex items-center gap-3 bg-[#d4af37] text-slate-900 px-8 py-4 rounded-md font-semibold text-base transition-all hover:bg-[#c5a059]">
-                Experimentar Primeira Jornada Sem Risco
+            <a href="https://wa.me/5512991845196?text=Olá!%20Fiquei%20interessado%20na%20proposta%20e%20gostaria%20de%20experimentar%20o%20serviço%20sem%20risco." target="_blank" class="inline-flex items-center gap-3 bg-[#d4af37] text-slate-900 px-8 py-4 rounded-md font-bold text-base transition-all hover:bg-[#c5a059]">
+                Iniciar Jornada com Risco Zero
             </a>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="py-20 px-4 text-center bg-[#fcfbfa]">
+    <section class="bg-slate-50 py-24 px-4 border-t border-slate-200">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-serif text-[#0f172a] text-center mb-12 font-bold">Perguntas Frequentes</h2>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                    <h3 class="text-[#0f172a] font-serif text-xl font-semibold mb-2">Como funciona o faturamento e a contratação do serviço?</h3>
+                    <p class="text-slate-600 font-light text-sm leading-relaxed">
+                        Operamos estritamente através do modelo de <strong>Blocos de Tempo Imobilizado</strong>. Você reserva a nossa estrutura executiva e acompanhantes para uso exclusivo da sua família por períodos planejados. Isso blinda a previsibilidade financeira e garante que atrasos comuns de clínicas ou trânsito não interrompam a segurança do atendimento.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                    <h3 class="text-[#0f172a] font-serif text-xl font-semibold mb-2">E se o idoso apresentar alguma resistência inicial em aceitar o acompanhante?</h3>
+                    <p class="text-slate-600 font-light text-sm leading-relaxed">
+                        Esse cenário é comum e previsto. Nosso protocolo inclui uma <u>Visita de Alinhamento leve e humanizada</u> na residência, onde nos apresentamos como <strong>Assistentes Particulares de Viagem</strong>. Desconstruímos o estigma da dependência, posicionando o serviço como um aliado direto da autonomia e liberdade dele fora de casa.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+                    <h3 class="text-[#0f172a] font-serif text-xl font-semibold mb-2">Qual a antecedência necessária para agendar ou cancelar um atendimento?</h3>
+                    <p class="text-slate-600 font-light text-sm leading-relaxed">
+                        Devido ao nosso rigor técnico e escala de veículos, os agendamentos devem ser programados em nossa central digital. Cancelamentos efetuados com mais de 24 horas de antecedência são convertidos integralmente em créditos operacionais para uso no mesmo mês vigente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 text-center bg-[#fcfbfa]">
         <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl font-serif text-[#0f172a] mb-4 font-bold">Vamos organizar a rotina dos seus pais juntos?</h2>
-            <p class="text-slate-500 font-light mb-8 text-sm">Como fazemos um atendimento totalmente personalizado, nossas vagas na escala semanal de campo são estritamente limitadas.</p>
-            <!-- BOTÃO 5 DE 5: WHATSAPP FINAL -->
-            <a href="https://wa.me/5512991845196?text=Olá!%20Desejo%20conversar%20com%20a%20Sempre%20Perto%20Sênior%20para%20combinar%20os%20horários." target="_blank" class="inline-flex items-center gap-3 bg-[#0f172a] text-[#d4af37] px-10 py-5 rounded-md font-bold text-lg transition-all hover:bg-slate-800">
-                Chamar no WhatsApp e Combinar Horários
+            <h2 class="text-4xl font-serif text-[#0f172a] mb-4 font-bold">Proteja a estabilidade da sua estrutura familiar</h2>
+            <p class="text-slate-500 font-light mb-8 text-sm">Nossas vagas operacionais semanais de campo são estritamente limitadas para garantir a excelência padrão ouro.</p>
+            <a href="https://wa.me/5512991845196?text=Olá!%20Desejo%20conversar%20com%20a%20Sempre%20Perto%20Sênior%20para%20combinar%20os%20horários." target="_blank" class="inline-flex items-center gap-3 bg-[#0f172a] text-[#d4af37] px-10 py-5 rounded-md font-bold text-lg transition-all hover:bg-slate-800 shadow-lg">
+                Ativar Cronograma Logístico de Segurança
             </a>
         </div>
     </section>
 
-    <footer class="bg-slate-950 py-8 text-center text-xs text-slate-500 font-light border-t border-slate-900">
-        <p>&copy; 2026 Sempre Perto Sênior. Todos os direitos reservados. Taubaté/SP.</p>
+    <footer class="bg-slate-950 py-12 px-4 text-center text-xs text-slate-500 font-light border-t border-slate-900">
+        <div class="max-w-5xl mx-auto space-y-4">
+            <nav class="flex justify-center gap-6 text-sm font-medium text-slate-400 mb-4">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="consultas-exames.html" class="hover:text-white">Consultas e Exames</a>
+                <a href="apoio-hospitalar.html" class="hover:text-white">Apoio Hospitalar</a>
+                <a href="turismo-senior.html" class="hover:text-white">Passeios e Lazer</a>
+            </nav>
+            <p>&copy; 2026 Sempre Perto Sênior. Todos os direitos reservados. Taubaté/SP.</p>
+        </div>
     </footer>
 </body>
 </html>

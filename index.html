@@ -3,162 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sempre Perto Sênior | Mobilidade Assistida e Concierge Premium</title>
+    <title>Sempre Perto Sênior | Transporte Especializado e Acompanhamento</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'deep-black': '#121212',
-                        'rich-gold': '#b58d3d',
-                        'light-gray': '#f4f4f4',
-                        'dark-text': '#0a0a0a'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { 'deep-black': '#121212', 'rich-gold': '#b58d3d', 'light-gray': '#f4f4f4', 'dark-text': '#0a0a0a' } } } }
     </script>
-    <style>
-        html { scroll-behavior: smooth; }
-    </style>
 </head>
 <body class="bg-white text-dark-text font-sans antialiased">
 
     <!-- HEADER -->
     <header class="sticky top-0 z-50 bg-white border-b-4 border-gray-400 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center">
-                <span class="font-serif text-2xl sm:text-3xl font-extrabold text-deep-black">
-                    SEMPRE<span class="text-rich-gold font-sans font-extrabold tracking-wider text-lg sm:text-xl ml-2 uppercase">Perto Sênior</span>
-                </span>
-            </div>
-            <nav class="hidden md:flex items-center gap-6 text-lg font-bold uppercase text-dark-text">
-                <a href="#servicos" class="hover:text-rich-gold transition-colors">Serviços</a>
-                <a href="consultas.html" class="hover:text-rich-gold transition-colors">Consultas</a>
-                <a href="transfer.html" class="hover:text-rich-gold transition-colors">Viagens & Transfer</a>
+            <span class="font-serif text-2xl font-extrabold text-deep-black">SEMPRE<span class="text-rich-gold font-sans font-extrabold text-lg ml-2 uppercase">Perto Sênior</span></span>
+            <nav class="hidden md:flex gap-6 font-bold uppercase">
+                <a href="#servicos" class="hover:text-rich-gold">Serviços</a>
+                <a href="consultas.html" class="hover:text-rich-gold">Consultas</a>
+                <a href="transfer.html" class="hover:text-rich-gold">Viagens</a>
             </nav>
-            <div>
-                <a href="https://wa.me/5512991845196?text=Olá! Gostaria de saber mais sobre o protocolo de atendimento da Sempre Perto Sênior." 
-                   target="_blank"
-                   class="bg-deep-black text-white px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base font-bold uppercase hover:bg-rich-gold transition-all duration-300 inline-flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i> Agendar Atendimento
-                </a>
-            </div>
+            <a href="https://wa.me/5512991845196" class="bg-deep-black text-white px-6 py-3 font-bold hover:bg-rich-gold transition-all">
+                <i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> (12) 99184-5196
+            </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative bg-light-gray py-12 lg:py-20 border-b-4 border-gray-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6 sm:space-y-8">
-                    <span class="bg-deep-black text-white px-3 py-1 text-sm sm:text-base font-bold tracking-widest uppercase inline-block">Referência em Mobilidade Assistida</span>
-                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-deep-black leading-tight font-extrabold">
-                        Preservando a autonomia de quem você ama, com a segurança que você exige.
-                    </h1>
-                    <p class="text-dark-text text-lg sm:text-xl font-bold leading-relaxed max-w-2xl">
-                        A logística da terceira idade não é apenas sobre transporte; é sobre dignidade. Oferecemos suporte completo — porta a porta, com acompanhamento ativo e paciência, garantindo que seu familiar nunca se sinta um peso, e você nunca precise se preocupar com a rotina dele.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                        <a href="#servicos" class="bg-deep-black text-white text-center px-8 py-4 text-base sm:text-lg font-bold uppercase tracking-wider hover:bg-rich-gold transition-all duration-300">
-                            Conheça Nosso Protocolo
-                        </a>
-                    </div>
+    <!-- HERO -->
+    <section class="bg-light-gray py-16 border-b-4 border-gray-400">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <h1 class="font-serif text-4xl lg:text-5xl text-deep-black font-extrabold leading-tight">
+                    Transporte Especializado e Acompanhamento para Idosos.
+                </h1>
+                <p class="text-xl font-bold leading-relaxed">
+                    Nossa frota busca seu familiar em casa com segurança. Não é apenas uma corrida; é um transporte com braço dado, auxílio na locomoção e paciência em cada etapa, do embarque ao destino final.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#servicos" class="bg-deep-black text-white px-8 py-4 font-bold uppercase hover:bg-rich-gold transition-all text-center">Ver Serviços</a>
+                    <a href="https://wa.me/5512991845196" class="border-2 border-deep-black px-8 py-4 font-bold uppercase text-center">Falar com a Central</a>
                 </div>
-                <div class="lg:col-span-5">
-                    <div class="bg-white border-4 border-deep-black p-6 sm:p-8 text-center space-y-4 sm:space-y-6 shadow-xl">
-                        <i class="fa-solid fa-handshake-angle text-5xl sm:text-6xl text-rich-gold"></i>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-extrabold text-deep-black">Paz de Espírito Familiar</h2>
-                        <p class="text-base sm:text-lg text-dark-text font-bold leading-relaxed">
-                            Substituímos o improviso pela excelência. Atendemos idosos ativos ou com mobilidade reduzida, unindo técnica de direção suave a um acolhimento humano inigualável.
-                        </p>
-                    </div>
-                </div>
+            </div>
+            <div class="lg:col-span-5 bg-white border-4 border-deep-black p-8 shadow-xl">
+                <i class="fa-solid fa-car-side text-6xl text-rich-gold mb-4"></i>
+                <h2 class="font-serif text-2xl font-extrabold mb-4">Por que nossa frota?</h2>
+                <p class="font-bold">Diferente de apps comuns, nossos veículos são preparados para o conforto sênior e nossos motoristas são treinados para o suporte assistido.</p>
             </div>
         </div>
     </section>
 
-    <!-- COMPARAÇÃO MATADORA -->
-    <section class="py-12 bg-white border-b-4 border-gray-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
-                <h2 class="font-serif text-3xl sm:text-4xl text-deep-black font-extrabold">Commodity vs. Compromisso</h2>
-                <p class="text-lg font-bold">Por que delegar a segurança do seu familiar a um transporte comum?</p>
+    <!-- COMPARAÇÃO -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-4xl text-deep-black font-extrabold">Sempre Perto Sênior vs. Uber ou Táxi</h2>
+                <p class="font-bold mt-2">Uma escolha de segurança para quem você ama.</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Coluna Apps -->
-                <div class="bg-red-50 p-6 sm:p-8 border-4 border-red-300 space-y-6">
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-red-800 text-center">Transporte por App</h3>
-                    <ul class="space-y-4 text-base sm:text-lg text-dark-text font-semibold">
-                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Exposição do idoso na calçada sem amparo.</li>
-                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Foco exclusivo na entrega, sem suporte humano.</li>
-                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Incerteza de qualidade e cancelamentos.</li>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-red-50 p-8 border-4 border-red-300">
+                    <h3 class="text-2xl font-bold text-red-800 mb-4">Uber ou Táxi Comum</h3>
+                    <ul class="space-y-4 font-semibold">
+                        <li><i class="fa-solid fa-times text-red-600 mr-2"></i> Motorista desconhecido sem treinamento.</li>
+                        <li><i class="fa-solid fa-times text-red-600 mr-2"></i> O idoso é deixado sozinho na calçada.</li>
+                        <li><i class="fa-solid fa-times text-red-600 mr-2"></i> Sem auxílio físico ou paciência no trânsito.</li>
                     </ul>
                 </div>
-
-                <!-- Coluna Sempre Perto -->
-                <div class="bg-emerald-50 p-6 sm:p-8 border-4 border-emerald-300 space-y-6">
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-800 text-center">Assessoria Sempre Perto</h3>
-                    <ul class="space-y-4 text-base sm:text-lg text-dark-text font-bold">
-                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Acompanhamento porta a porta, "de braço dado".</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Concierge completo: da sala de espera ao retorno ao lar.</li>
-                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Compromisso inegociável com horário e pontualidade.</li>
+                <div class="bg-emerald-50 p-8 border-4 border-emerald-300">
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-4">Sempre Perto Sênior</h3>
+                    <ul class="space-y-4 font-bold">
+                        <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Motorista-Cuidador treinado e de confiança.</li>
+                        <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Atendimento porta a porta: auxílio dentro de casa.</li>
+                        <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Condução suave e respeito total ao idoso.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="py-12 bg-light-gray border-b-4 border-gray-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
-                <h2 class="font-serif text-3xl sm:text-4xl text-deep-black font-extrabold">Nosso Padrão de Cuidado</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 sm:p-8 border-4 border-gray-300 shadow-sm hover:border-rich-gold transition-all duration-300">
-                    <i class="fa-solid fa-user text-3xl text-rich-gold mb-4"></i>
-                    <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold mb-4">Concierge Sênior</h3>
-                    <p class="text-dark-text font-bold leading-relaxed mb-6">Para quem busca autonomia com segurança. Assistência personalizada para compromissos rotineiros e sociais.</p>
-                    <a href="consultas.html" class="text-rich-gold font-bold uppercase underline hover:text-deep-black">Saiba Mais</a>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white p-6 sm:p-8 border-4 border-gray-300 shadow-sm hover:border-rich-gold transition-all duration-300">
-                    <i class="fa-solid fa-users text-3xl text-rich-gold mb-4"></i>
-                    <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold mb-4">Acompanhamento Premium</h3>
-                    <p class="text-dark-text font-bold leading-relaxed mb-6">A Dupla (Motorista + Acompanhante). O suporte definitivo para idosos com mobilidade reduzida ou consultas médicas complexas.</p>
-                    <a href="consultas.html" class="text-rich-gold font-bold uppercase underline hover:text-deep-black">Saiba Mais</a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white p-6 sm:p-8 border-4 border-gray-300 shadow-sm hover:border-rich-gold transition-all duration-300">
-                    <i class="fa-solid fa-hospital text-3xl text-rich-gold mb-4"></i>
-                    <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold mb-4">Retaguarda Hospitalar</h3>
-                    <p class="text-dark-text font-bold leading-relaxed mb-6">Presença ativa em exames, pós-operatórios e internações. O elo de ligação entre o hospital e a família.</p>
-                    <a href="consultas.html#hospitalar" class="text-rich-gold font-bold uppercase underline hover:text-deep-black">Saiba Mais</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-white border-t-2 border-gray-300 py-12 text-center text-dark-text">
-        <p class="font-serif text-2xl font-bold text-deep-black mb-2">SEMPRE<span class="text-rich-gold ml-2">Perto Sênior</span></p>
-        <p>© 2026 Sempre Perto Sênior. Preservando a autonomia, garantindo a dignidade.</p>
+    <footer class="py-12 text-center border-t border-gray-300">
+        <p class="font-bold">© 2026 Sempre Perto Sênior.</p>
     </footer>
 
 </body>

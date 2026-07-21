@@ -3,84 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sempre Perto Sênior | Transporte Especializado e Acompanhamento</title>
+    <title>Sempre Perto Sênior | Transporte Especializado e Acompanhamento para Idosos</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script>
-        tailwind.config = { theme: { extend: { colors: { 'deep-black': '#121212', 'rich-gold': '#b58d3d', 'light-gray': '#f4f4f4', 'dark-text': '#0a0a0a' } } } }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-black': '#121212',
+                        'rich-gold': '#b58d3d',
+                        'light-gray': '#f4f4f4',
+                        'dark-text': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
     </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body class="bg-white text-dark-text font-sans antialiased">
 
-    <!-- HEADER -->
+    <!-- HEADER / NAVBAR -->
     <header class="sticky top-0 z-50 bg-white border-b-4 border-gray-400 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <span class="font-serif text-2xl font-extrabold text-deep-black">SEMPRE<span class="text-rich-gold font-sans font-extrabold text-lg ml-2 uppercase">Perto Sênior</span></span>
-            <nav class="hidden md:flex gap-6 font-bold uppercase">
-                <a href="#servicos" class="hover:text-rich-gold">Serviços</a>
-                <a href="consultas.html" class="hover:text-rich-gold">Consultas</a>
-                <a href="transfer.html" class="hover:text-rich-gold">Viagens</a>
+            <div class="flex items-center">
+                <span class="font-serif text-2xl sm:text-3xl font-extrabold text-deep-black">
+                    SEMPRE<span class="text-rich-gold font-sans font-extrabold tracking-wider text-lg sm:text-xl ml-2 uppercase">Perto Sênior</span>
+                </span>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-lg font-bold uppercase text-dark-text">
+                <a href="#servicos" class="hover:text-rich-gold transition-colors">Serviços</a>
+                <a href="consultas.html" class="hover:text-rich-gold transition-colors">Consultas</a>
+                <a href="transfer.html" class="hover:text-rich-gold transition-colors">Viagens & Transfer</a>
+                <a href="passeios.html" class="hover:text-rich-gold transition-colors">Passeios</a>
             </nav>
-            <a href="https://wa.me/5512991845196" class="bg-deep-black text-white px-6 py-3 font-bold hover:bg-rich-gold transition-all">
-                <i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> (12) 99184-5196
-            </a>
+            <div>
+                <a href="https://wa.me/5512991845196?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Sempre%20Perto%20S%C3%AAnior." 
+                   target="_blank"
+                   class="bg-deep-black text-white px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base font-bold uppercase hover:bg-rich-gold transition-all duration-300 inline-flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl text-emerald-400"></i> (12) 99184-5196
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="bg-light-gray py-16 border-b-4 border-gray-400">
-        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6">
-                <h1 class="font-serif text-4xl lg:text-5xl text-deep-black font-extrabold leading-tight">
-                    Transporte Especializado e Acompanhamento para Idosos.
-                </h1>
-                <p class="text-xl font-bold leading-relaxed">
-                    Nossa frota busca seu familiar em casa com segurança. Não é apenas uma corrida; é um transporte com braço dado, auxílio na locomoção e paciência em cada etapa, do embarque ao destino final.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#servicos" class="bg-deep-black text-white px-8 py-4 font-bold uppercase hover:bg-rich-gold transition-all text-center">Ver Serviços</a>
-                    <a href="https://wa.me/5512991845196" class="border-2 border-deep-black px-8 py-4 font-bold uppercase text-center">Falar com a Central</a>
+    <!-- HERO SECTION (FOCO TOTAL EM IDOSOS) -->
+    <section class="relative bg-light-gray py-12 lg:py-20 border-b-4 border-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 sm:space-y-8">
+                    <span class="bg-deep-black text-white px-3 py-1 text-sm sm:text-base font-bold tracking-widest uppercase inline-block">Apoio Exclusivo para a Terceira Idade</span>
+                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-deep-black leading-tight font-extrabold">
+                        Transporte Especializado e Acompanhamento para Idosos.
+                    </h1>
+                    <p class="text-dark-text text-lg sm:text-xl font-bold leading-relaxed max-w-2xl">
+                        Você não pode acompanhar seus pais ao médico ou ao supermercado hoje? A Sempre Perto busca de carro, dá o braço firme para caminhar e faz companhia atenta do início ao fim com total carinho e paciência.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                        <a href="#servicos" class="bg-deep-black text-white text-center px-8 py-4 text-base sm:text-lg font-bold uppercase tracking-wider hover:bg-rich-gold transition-all duration-300">
+                            Ver Nossos Serviços
+                        </a>
+                        <a href="https://wa.me/5512991845196?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20agendar%20um%20acompanhamento%20para%20idosos." 
+                           target="_blank" 
+                           class="bg-white border-2 border-deep-black text-deep-black text-center px-8 py-4 text-base sm:text-lg font-bold uppercase tracking-wider hover:bg-gray-100 transition-all duration-300 inline-flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl text-emerald-700"></i> Falar com a Central
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="lg:col-span-5 bg-white border-4 border-deep-black p-8 shadow-xl">
-                <i class="fa-solid fa-car-side text-6xl text-rich-gold mb-4"></i>
-                <h2 class="font-serif text-2xl font-extrabold mb-4">Por que nossa frota?</h2>
-                <p class="font-bold">Diferente de apps comuns, nossos veículos são preparados para o conforto sênior e nossos motoristas são treinados para o suporte assistido.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPARAÇÃO -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="font-serif text-4xl text-deep-black font-extrabold">Sempre Perto Sênior vs. Uber ou Táxi</h2>
-                <p class="font-bold mt-2">Uma escolha de segurança para quem você ama.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-red-50 p-8 border-4 border-red-300">
-                    <h3 class="text-2xl font-bold text-red-800 mb-4">Uber ou Táxi Comum</h3>
-                    <ul class="space-y-4 font-semibold">
-                        <li><i class="fa-solid fa-times text-red-600 mr-2"></i> Motorista desconhecido sem treinamento.</li>
-                        <li><i class="fa-solid fa-times text-red-600 mr-2"></i> O idoso é deixado sozinho na calçada.</li>
-                        <li><i class="fa-solid fa-times text-red-600 mr-2"></i> Sem auxílio físico ou paciência no trânsito.</li>
-                    </ul>
-                </div>
-                <div class="bg-emerald-50 p-8 border-4 border-emerald-300">
-                    <h3 class="text-2xl font-bold text-emerald-800 mb-4">Sempre Perto Sênior</h3>
-                    <ul class="space-y-4 font-bold">
-                        <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Motorista-Cuidador treinado e de confiança.</li>
-                        <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Atendimento porta a porta: auxílio dentro de casa.</li>
-                        <li><i class="fa-solid fa-check text-emerald-600 mr-2"></i> Condução suave e respeito total ao idoso.</li>
-                    </ul>
+                <div class="lg:col-span-5">
+                    <div class="bg-white border-4 border-deep-black p-6 sm:p-8 text-center space-y-4 sm:space-y-6 shadow-xl">
+                        <i class="fa-solid fa-person-cane text-5xl sm:text-6xl text-rich-gold"></i>
+                        <h2 class="font-serif text-2xl sm:text-3xl font-extrabold text-deep-black">Segurança para Idosos</h2>
+                        <p class="text-base sm:text-lg text-dark-text font-bold leading-relaxed">
+                            Nós não fazemos apenas transporte de passageiros. Nós cuidamos de idosos ativos ou com limitações físicas, oferecendo suporte em exames, compras e viagens.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center border-t border-gray-300">
-        <p class="font-bold">© 2026 Sempre Perto Sênior.</p>
+    <!-- TABELA COMPARATIVA MATADORA (POR QUE NÃO USAR UBER OU TÁXI?) -->
+    <section class="py-12 bg-white border-b-4 border-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
+                <span class="text-rich-gold text-base sm:text-lg font-bold tracking-widest uppercase font-extrabold">A Escolha Inteligente</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-deep-black font-extrabold">Por que não usar um Uber ou Táxi comum para idosos?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Coluna Uber / Táxi -->
+                <div class="bg-red-50 p-6 sm:p-8 border-4 border-red-300 space-y-6">
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-red-800 text-center"><i class="fa-solid fa-circle-xmark mr-2"></i> Uber ou Táxi Comum</h3>
+                    <ul class="space-y-4 text-base sm:text-lg text-dark-text font-semibold">
+                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Deixam o idoso sozinho na calçada, exposto ao sol e chuva.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Não ajudam a caminhar, carregar sacolas ou entrar em consultórios.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Cancelamentos frequentes em cima da hora, gerando ansiedade e perda de consultas.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Direção impaciente e estressada, sem respeitar a fisiologia sênior.</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna Sempre Perto -->
+                <div class="bg-emerald-50 p-6 sm:p-8 border-4 border-emerald-300 space-y-6">
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-800 text-center"><i class="fa-solid fa-circle-check mr-2"></i> Sempre Perto Sênior</h3>
+                    <ul class="space-y-4 text-base sm:text-lg text-dark-text font-bold">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Suporte porta a porta completo. Buscamos de braço dado dentro de casa.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Entramos na clínica, preenchemos guias, carregamos compras e fazemos companhia ativa.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Agendamento prévio garantido. Sem atrasos ou cancelamentos surpresa.</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-3 mt-1 flex-shrink-0"></i> Condução de extrema suavidade física, respeitando as articulações do idoso.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUADRO DE SERVIÇOS (Solo, Dupla, Apoio Hospitalar) -->
+    <section id="servicos" class="py-12 bg-light-gray border-b-4 border-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
+                <span class="text-rich-gold text-base sm:text-lg font-bold tracking-widest uppercase">Como Cuidamos</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-deep-black font-extrabold">Nossos Serviços Especializados para Idosos</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1: Solo -->
+                <div class="bg-white p-6 sm:p-8 border-4 border-gray-300 shadow-sm flex flex-col justify-between hover:border-rich-gold transition-all duration-300">
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="w-14 h-14 bg-light-gray flex items-center justify-center text-rich-gold border-2 border-gray-400">
+                            <i class="fa-solid fa-user text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold">Concierge Sênior Solo</h3>
+                        <p class="text-dark-text font-bold leading-relaxed text-base sm:text-lg">
+                            <strong>Um motorista de confiança que serve como assistente pessoal.</strong> Ideal para idosos ativos que querem ir ao supermercado, banco, salão de beleza ou realizar consultas de rotina sem preocupações de direção ou esforço físico.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <a href="consultas.html" class="bg-deep-black text-white block text-center py-4 text-base font-bold uppercase hover:bg-rich-gold transition-all duration-300">
+                            Ver Detalhes do Solo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Serviço 2: Dupla -->
+                <div class="bg-white p-6 sm:p-8 border-4 border-gray-300 shadow-sm flex flex-col justify-between hover:border-rich-gold transition-all duration-300">
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="w-14 h-14 bg-light-gray flex items-center justify-center text-rich-gold border-2 border-gray-400">
+                            <i class="fa-solid fa-users text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold">Assistência Premium (A Dupla)</h3>
+                        <p class="text-dark-text font-bold leading-relaxed text-base sm:text-lg">
+                            <strong>Um motorista e uma acompanhante dedicada de bordo.</strong> Desenhado para idosos com mobilidade reduzida ou consultas complexas. O motorista conduz de forma suave enquanto a acompanhante oferece o braço, resolve fichas e dá total acolhimento.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <a href="consultas.html" class="bg-deep-black text-white block text-center py-4 text-base font-bold uppercase hover:bg-rich-gold transition-all duration-300">
+                            Ver Detalhes da Dupla
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Serviço 3: Apoio Hospitalar -->
+                <div class="bg-white p-6 sm:p-8 border-4 border-gray-300 shadow-sm flex flex-col justify-between hover:border-rich-gold transition-all duration-300">
+                    <div class="space-y-4 sm:space-y-6">
+                        <div class="w-14 h-14 bg-light-gray flex items-center justify-center text-rich-gold border-2 border-gray-400">
+                            <i class="fa-solid fa-hospital text-2xl"></i>
+                        </div>
+                        <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold">Apoio e Retaguarda Hospitalar</h3>
+                        <p class="text-dark-text font-bold leading-relaxed text-base sm:text-lg">
+                            <strong>Companhia e auxílio em exames, pós-operatórios e internações.</strong> Nosso profissional faz companhia ativa na poltrona do quarto, auxilia a chamar a enfermagem, organiza as refeições e atualiza a família sobre o estado do paciente.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <a href="consultas.html#hospitalar" class="bg-deep-black text-white block text-center py-4 text-base font-bold uppercase hover:bg-rich-gold transition-all duration-300">
+                            Ver Apoio Hospitalar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOCO DE TRANSFER E VIAGENS -->
+    <section class="py-12 bg-white border-b-4 border-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-rich-gold text-base sm:text-lg font-bold tracking-widest uppercase">Viagens Seguras</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-deep-black font-extrabold">Viagens, Transfers e Visitas Familiares</h2>
+                    <p class="text-dark-text text-lg sm:text-xl font-bold leading-relaxed">
+                        Precisa levar seus pais idosos para visitar parentes, netos, comparecer a casamentos de família, festas ou eventos em outras cidades com total segurança? Nós realizamos a viagem intermunicipal porta a porta de forma tranquila e sem estresse de trânsito.
+                    </p>
+                </div>
+                <div class="lg:col-span-5 text-center">
+                    <div class="bg-light-gray border-4 border-gray-300 p-6 sm:p-8 space-y-6 shadow-md">
+                        <i class="fa-solid fa-plane-departure text-5xl text-rich-gold"></i>
+                        <h3 class="font-serif text-xl sm:text-2xl text-deep-black font-bold">Transfers de Confiança</h3>
+                        <p class="text-base sm:text-lg text-dark-text font-bold">Oferecemos transfers dedicados para aeroportos de São Paulo, hotéis e visitas familiares intermunicipais de forma confortável.</p>
+                        <a href="transfer.html" class="bg-deep-black text-white block text-center py-4 text-base font-bold uppercase hover:bg-rich-gold transition-all duration-300">
+                            Conhecer Opções de Viagem
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTORIDADE: PROJETOS SOCIAIS / COMPROMISSO COM A COMUNIDADE -->
+    <section class="py-12 bg-light-gray border-b-4 border-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-rich-gold text-base sm:text-lg font-bold tracking-widest uppercase">Nossa Responsabilidade</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-deep-black font-extrabold">Compromisso com a Comunidade</h2>
+                    <p class="text-dark-text font-bold leading-relaxed text-lg sm:text-xl">
+                        Acreditamos que cuidar de quem construiu a nossa história é um dever de todos. Por isso, desenvolvemos iniciativas sociais focadas em apoiar a qualidade de vida e a saúde mental sênior na nossa região.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Projeto 1 -->
+                    <div class="bg-white p-6 border-4 border-gray-200 flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-light-gray flex-shrink-0 flex items-center justify-center text-rich-gold border-2 border-gray-400 text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div>
+                            <h4 class="font-serif text-lg sm:text-xl text-deep-black font-bold mb-2">Oficinas Comunitárias de Inclusão Digital</h4>
+                            <p class="text-dark-text text-base sm:text-lg font-bold leading-relaxed">
+                                Oferecemos encontros práticos gratuitos para ensinar a terceira idade a utilizar o celular com segurança, fazer chamadas de vídeo com familiares e, principalmente, como evitar golpes virtuais.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Projeto 2 -->
+                    <div class="bg-white p-6 border-4 border-gray-200 flex gap-6 items-start">
+                        <div class="w-12 h-12 bg-light-gray flex-shrink-0 flex items-center justify-center text-rich-gold border-2 border-gray-400 text-xl"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <div>
+                            <h4 class="font-serif text-lg sm:text-xl text-deep-black font-bold mb-2">Rodas de Conversa para Cuidadores Familiares</h4>
+                            <p class="text-dark-text text-base sm:text-lg font-bold leading-relaxed">
+                                Cuidar de parentes idosos com saúde frágil pode ser emocionalmente pesado. Oferecemos grupos de acolhimento psicológico gratuitos para filhos que exercem o papel de cuidadores e precisam de suporte emocional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <section class="bg-deep-black text-white py-12 text-center space-y-6 sm:space-y-8">
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight font-extrabold">
+            Dê ao seu familiar o carinho e a atenção que ele merece.
+        </h2>
+        <p class="text-gray-300 font-bold max-w-xl mx-auto text-lg sm:text-xl">
+            Cuidamos de tudo para que você trabalhe com a mente tranquila. Agendamentos prévios com antecedência mínima de 24 horas.
+        </p>
+        <div>
+            <a href="https://wa.me/5512991845196?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20bloco%20de%20atendimento%20para%20esta%20semana." 
+               target="_blank"
+               class="bg-rich-gold text-white px-6 py-4 sm:px-8 sm:py-5 text-base sm:text-lg font-bold uppercase tracking-wider hover:bg-white hover:text-deep-black transition-all duration-300 inline-flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Chamar no (12) 99184-5196
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t-2 border-gray-300 py-12 text-base text-dark-text">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="font-serif text-2xl font-bold text-deep-black">
+                    SEMPRE<span class="text-rich-gold font-sans font-normal tracking-widest text-lg ml-1 uppercase">Perto Sênior</span>
+                </span>
+                <p class="text-sm text-gray-700 mt-1">© 2026 Sempre Perto Sênior. Todos os direitos reservados.</p>
+            </div>
+            <div class="flex gap-6 text-sm uppercase tracking-wider font-bold">
+                <a href="consultas.html" class="hover:text-rich-gold">Consultas</a>
+                <a href="transfer.html" class="hover:text-rich-gold">Viagens</a>
+                <a href="passeios.html" class="hover:text-rich-gold">Passeios</a>
+            </div>
+        </div>
     </footer>
 
 </body>

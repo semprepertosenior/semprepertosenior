@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de O.S. - Sempre Perto 60+</title>
+  <!-- Bibliotecas do pdfmake via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #F4F1EA; color: #3E4447; }
+    .card { background: #fff; padding: 20px; border-radius: 8px; max-width: 500px; margin: auto; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { color: #2D4739; margin-top: 0; }
+    label { display: block; margin-top: 10px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    button { background: #2D4739; color: white; border: none; padding: 12px; border-radius: 4px; width: 100%; font-size: 16px; margin-top: 20px; cursor: pointer; }
+    button:active { background: #B5532B; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Nova Ordem de Serviço</h2>
+  <form id="osForm">
+    <label>Número da O.S.:</label>
+    <input type="text" id="numeroOS" placeholder="Ex: OS-2026-001" required>
+
+    <label>Nome do Cliente / Sênior:</label>
+    <input type="text" id="nomeCliente" placeholder="Ex: Dona Helena" required>
+
+    <label>Responsável / Comprador:</label>
+    <input type="text" id="nomeResponsavel" placeholder="Ex: Patricia (Filha)">
+
+    <label>Tipo de Serviço:</label>
+    <select id="tipoServico">
+      <option value="Transfer Executivo">Transfer Executivo / Acompanhamento</option>
+      <option value="Turismo Humanizado">Turismo Humanizado / Passeio</option>
+      <option value="Saúde Domiciliar">Fisioterapia / Massoterapia</option>
+      <option value="Personal Chef Sênior">Personal Chef Sênior</option>
+    </select>
+
+    <label>Data e Horário:</label>
+    <input type="datetime-local" id="dataHora" required>
+
+    <label>Descrição / Detalhes:</label>
+    <textarea id="descricao" rows="3" placeholder="Ex: Busca em Taubaté para consulta médica em SJC. Aguardo no local."></textarea>
+
+    <label>Valor Total (R$):</label>
+    <input type="number" id="valorTotal" step="0.01" placeholder="0.00" required>
+
+    <button type="button" onclick="gerarOS()">Gerar e Baixar O.S. (PDF)</button>
+  </form>
+</div>
+
+<script>
+function gerarOS() {
+  // Coleta os dados do formulário
+  const numeroOS = document.getElementById('numeroOS').value;
+  const cliente = document.getElementById('nomeCliente').value;
+  const responsavel = document.getElementById('nomeResponsavel').value;
+  const servico = document.getElementById('tipoServico').value;
+  const dataHora = new Date(document.getElementById('dataHora').value).toLocaleString('pt-BR');
+  const descricao = document.getElementById('descricao').value;
+  const valor = parseFloat(document.getElementById('valorTotal').value).toFixed(2);
+
+  // Define a estrutura do PDF
+  const docDefinition = {
+    content: [
+      { text: 'SEMPRE PERTO 60+ SÊNIOR', style: 'header' },
+      { text: 'Ordem de Serviço & Confirmação de Atendimento', style: 'subheader' },
+      { text: '_________________________________________________________________________________', color: '#2D4739', margin: [0, 0, 0, 15] },
+      
+      {
+        columns: [
+          { text: `Nº O.S.: ${numeroOS}\nData Emissão: ${new Date().toLocaleDateString('pt-BR')}`, width: '*' },
+          { text: `Status: Agendado / Aprovado`, alignment: 'right', bold: true, color: '#2D4739' }
+        ],
+        margin: [0, 0, 0, 15]
+      },
+      
+      { text: 'DADOS DO ATENDIMENTO', style: 'sectionTitle' },
+      {
+        table: {
+          widths: ['*'],
+          body: [
+            [{ text: `Cliente / Sênior: ${cliente}\nResponsável: ${responsavel || 'O próprio'}\nData/Hora do Serviço: ${dataHora}`, fillColor: '#F4F1EA' }]
+          ]
+        },
+        layout: 'noBorders',
+        margin: [0, 0, 0, 15]
+      },
+
+      { text: 'DETALHES DO SERVIÇO', style: 'sectionTitle' },
+      {
+        table: {
+          widths: ['*', 'auto'],
+          body: [
+            [{ text: 'Serviço / Descrição', bold: true }, { text: 'Valor', bold: true }],
+            [`${servico}\n${descricao}`, `R$ ${valor}`]
+          ]
+        },
+        margin: [0, 0, 0, 15]
+      },
+
+      { text: `TOTAL: R$ ${valor}`, style: 'total', alignment: 'right' },
+      
+      { text: '\n\nInformações Adicionais:', style: 'sectionTitle' },
+      { text: '• Acompanhamento e atualização de status em tempo real via WhatsApp.\n• Em caso de dúvidas ou alterações de horário, entre em contato conosco.', fontSize: 10, italic: true }
+    ],
+    styles: {
+      header: { fontSize: 18, bold: true, color: '#2D4739', alignment: 'center' },
+      subheader: { fontSize: 12, italic: true, color: '#B5532B', alignment: 'center', margin: [0, 5, 0, 5] },
+      sectionTitle: { fontSize: 12, bold: true, color: '#2D4739', margin: [0, 5, 0, 5] },
+      total: { fontSize: 14, bold: true, color: '#B5532B' }
+    }
+  };
+
+  // Gera e baixa o PDF
+  pdfMake.createPdf(docDefinition).download(`${numeroOS}_SemprePerto.pdf`);
+}
+</script>
+
+</body>
+</html>

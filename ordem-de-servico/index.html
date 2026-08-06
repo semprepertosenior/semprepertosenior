@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de O.S. - Sempre Perto 60+ Sênior</title>
+  
+  <!-- Bibliotecas PDF (pdfMake) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+
+  <style>
+    :root {
+      --verde-musgo: #2D4739;
+      --terracota: #B5532B;
+      --areia: #F4F1EA;
+      --chumbo: #3E4447;
+      --branco: #FFFFFF;
+    }
+
+    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    
+    body {
+      background-color: var(--areia);
+      color: var(--chumbo);
+      margin: 0;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: var(--branco);
+      width: 100%;
+      max-width: 480px;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border: 1px solid rgba(45, 71, 57, 0.1);
+    }
+
+    .header-logo {
+      text-align: center;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--verde-musgo);
+      padding-bottom: 12px;
+    }
+
+    .header-logo h1 {
+      color: var(--verde-musgo);
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .header-logo p {
+      color: var(--terracota);
+      font-size: 13px;
+      margin: 4px 0 0 0;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--verde-musgo);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 15px;
+      border: 1px solid #DCD8CD;
+      border-radius: 8px;
+      background-color: #FAF9F6;
+      color: var(--chumbo);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--verde-musgo);
+      background-color: var(--branco);
+      box-shadow: 0 0 0 2px rgba(45, 71, 57, 0.2);
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .col { flex: 1; }
+
+    button {
+      background-color: var(--verde-musgo);
+      color: var(--branco);
+      border: none;
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+      box-shadow: 0 3px 8px rgba(45, 71, 57, 0.3);
+      transition: background 0.2s;
+    }
+
+    button:active {
+      background-color: var(--terracota);
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 11px;
+      color: #777;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-logo">
+    <h1>Sempre Perto 60+</h1>
+    <p>GERADOR DE ORDEM DE SERVIÇO</p>
+  </div>
+
+  <form id="osForm">
+    <div class="row">
+      <div class="col form-group">
+        <label for="numeroOS">Nº da O.S.</label>
+        <input type="text" id="numeroOS" placeholder="Ex: 1001" required>
+      </div>
+      <div class="col form-group">
+        <label for="dataServico">Data</label>
+        <input type="date" id="dataServico" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nomeCliente">Cliente / Sênior (Consumidor)</label>
+      <input type="text" id="nomeCliente" placeholder="Ex: Dona Helena" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nomeResponsavel">Responsável / Filho (Comprador)</label>
+      <input type="text" id="nomeResponsavel" placeholder="Ex: Patrícia (Filha)">
+    </div>
+
+    <div class="form-group">
+      <label for="pilarServico">Pilar de Serviço</label>
+      <select id="pilarServico">
+        <option value="Transfer Executivo & Acompanhamento">Transfer Executivo & Acompanhamento</option>
+        <option value="Turismo Humanizado & Passeio">Turismo Humanizado & Passeio</option>
+        <option value="Saúde Domiciliar (Fisioterapia / Massoterapia)">Saúde Domiciliar (Fisioterapia / Masso)</option>
+        <option value="Personal Chef Sênior (Gastronomia)">Personal Chef Sênior (Gastronomia)</option>
+        <option value="Concierge & Eventos em Grupo">Concierge & Eventos em Grupo</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <div class="col form-group">
+        <label for="horaInicio">Horário</label>
+        <input type="time" id="horaInicio" required>
+      </div>
+      <div class="col form-group">
+        <label for="valorTotal">Valor Total (R$)</label>
+        <input type="number" id="valorTotal" step="0.01" placeholder="0.00" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="detalhes">Detalhes / Itinerário / Endereço</label>
+      <textarea id="detalhes" rows="3" placeholder="Ex: Saída de Taubaté para consulta na clínica em SJC. Acompanhamento presencial até o retorno."></textarea>
+    </div>
+
+    <button type="button" onclick="gerarPDF()">GERAR E BAIXAR O.S. (PDF)</button>
+  </form>
+
+  <div class="footer-note">
+    Sempre Perto 60+ Sênior • Autonomia, Segurança e Conforto
+  </div>
+</div>
+
+<script>
+  // Preenche a data de hoje automaticamente
+  document.getElementById('dataServico').valueAsDate = new Date();
+
+  function gerarPDF() {
+    const numOS = document.getElementById('numeroOS').value || '0000';
+    const dataBr = document.getElementById('dataServico').value.split('-').reverse().join('/');
+    const cliente = document.getElementById('nomeCliente').value || 'Não informado';
+    const responsavel = document.getElementById('nomeResponsavel').value || 'O próprio';
+    const pilar = document.getElementById('pilarServico').value;
+    const hora = document.getElementById('horaInicio').value || '--:--';
+    const valor = parseFloat(document.getElementById('valorTotal').value || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+    const detalhes = document.getElementById('detalhes').value || 'Atendimento padrão conforme solicitado.';
+
+    const docDefinition = {
+      pageSize: 'A4',
+      pageMargins: [40, 40, 40, 40],
+      content: [
+        // Cabeçalho
+        {
+          table: {
+            widths: ['*'],
+            body: [
+              [{ text: 'SEMPRE PERTO 60+ SÊNIOR', style: 'brandTitle', alignment: 'center' }],
+              [{ text: 'ORDEM DE SERVIÇO E CONFIRMAÇÃO DE AGENDAMENTO', style: 'brandSub', alignment: 'center' }]
+            ]
+          },
+          layout: 'noBorders',
+          margin: [0, 0, 0, 15]
+        },
+
+        { canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 2, lineColor: '#2D4739' }] },
+        { text: ' ', margin: [0, 5] },
+
+        // Número e Status
+        {
+          columns: [
+            { text: [ { text: 'Ordem de Serviço Nº: ', bold: true }, numOS ], fontSize: 12, color: '#3E4447' },
+            { text: [ { text: 'Emissão: ', bold: true }, dataBr ], fontSize: 11, alignment: 'right', color: '#3E4447' }
+          ],
+          margin: [0, 0, 0, 15]
+        },
+
+        // Bloco Cliente
+        { text: '1. DADOS DO ATENDIMENTO', style: 'sectionHeader' },
+        {
+          style: 'tableExample',
+          table: {
+            widths: [120, '*'],
+            body: [
+              [{ text: 'Cliente / Sênior:', bold: true, color: '#2D4739' }, cliente],
+              [{ text: 'Responsável / Contato:', bold: true, color: '#2D4739' }, responsavel],
+              [{ text: 'Data & Horário:', bold: true, color: '#2D4739' }, `${dataBr} às ${hora}h`]
+            ]
+          },
+          layout: {
+            fillColor: function (rowIndex) { return (rowIndex % 2 === 0) ? '#F4F1EA' : null; },
+            hLineWidth: function () { return 0.5; },
+            vLineWidth: function () { return 0; },
+            hLineColor: function () { return '#DCD8CD'; }
+          },
+          margin: [0, 0, 0, 15]
+        },
+
+        // Bloco Serviço
+        { text: '2. ESPECIFICAÇÃO DOS SERVIÇOS', style: 'sectionHeader' },
+        {
+          table: {
+            widths: ['*', 100],
+            body: [
+              [
+                { text: 'Pilar / Descrição do Atendimento', bold: true, color: '#FFFFFF', fillColor: '#2D4739' },
+                { text: 'Valor do Serviço', bold: true, color: '#FFFFFF', fillColor: '#2D4739', alignment: 'right' }
+              ],
+              [
+                { text: [ { text: pilar + '\n\n', bold: true, color: '#B5532B' }, { text: detalhes, fontSize: 10, color: '#3E4447' } ] },
+                { text: `R$ ${valor}`, alignment: 'right', bold: true, fontSize: 12 }
+              ]
+            ]
+          },
+          margin: [0, 0, 0, 15]
+        },
+
+        // Valor Total Destacado
+        {
+          table: {
+            widths: ['*', 150],
+            body: [
+              [
+                { text: 'VALOR TOTAL CONTRATADO:', bold: true, alignment: 'right', fontSize: 12, color: '#2D4739' },
+                { text: `R$ ${valor}`, bold: true, alignment: 'right', fontSize: 14, color: '#B5532B', fillColor: '#F4F1EA' }
+              ]
+            ]
+          },
+          layout: 'noBorders',
+          margin: [0, 0, 0, 20]
+        },
+
+        // Termos / Compromisso
+        { text: '3. COMPROMISSO DE QUALIDADE E SEGURANÇA', style: 'sectionHeader' },
+        {
+          ul: [
+            'Acompanhamento e suporte humanizado focado na autonomia e ritmo do cliente sênior.',
+            'Envio de atualizações e fotos em tempo real para o responsável durante todo o atendimento.',
+            'Pontualidade, discrição e respeito absoluto aos protocolos de segurança.'
+          ],
+          fontSize: 9,
+          color: '#555555',
+          margin: [0, 0, 0, 30]
+        },
+
+        // Assinatura Rodapé
+        {
+          columns: [
+            { text: '____________________________________\nSempre Perto 60+ Sênior', alignment: 'center', fontSize: 10, color: '#2D4739' },
+            { text: '____________________________________\nAceite do Cliente / Responsável', alignment: 'center', fontSize: 10, color: '#2D4739' }
+          ],
+          margin: [0, 20, 0, 0]
+        }
+      ],
+      styles: {
+        brandTitle: { fontSize: 18, bold: true, color: '#2D4739', letterSpacing: 1 },
+        brandSub: { fontSize: 10, bold: true, color: '#B5532B' },
+        sectionHeader: { fontSize: 11, bold: true, color: '#2D4739', margin: [0, 0, 0, 6] }
+      }
+    };
+
+    // Gera e baixa o PDF com nome personalizado
+    pdfMake.createPdf(docDefinition).download(`OS_${numOS}_SemprePerto.pdf`);
+  }
+</script>
+
+</body>
+</html>

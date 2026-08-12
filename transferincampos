@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransferinCampos com Yuri | Passeios & Experiências na Mantiqueira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0F172A; /* Slate Super Escuro / Executivo */
+            --secondary-color: #1E293B; 
+            --accent-color: #D4AF37;  /* Dourado Ouro Rico */
+            --bg-light: #0B0F19;      /* Fundo Geral Escuro Moderno */
+            --card-bg: #131C2E;       /* Fundo dos Cards */
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        /* HEADER HERO */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-muted);
+        }
+
+        /* MENU DE NAVEGAÇÃO RÁPIDA (STICKY) */
+        .nav-menu {
+            position: sticky;
+            top: 0;
+            background: var(--primary-color);
+            z-index: 1000;
+            padding: 12px 10px;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-menu::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            border: 1px solid var(--accent-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        /* CARD DE INFORMAÇÕES BÁSICAS */
+        .info-card {
+            background: var(--card-bg);
+            border-left: 5px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .info-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .info-card ul {
+            list-style: none;
+        }
+
+        .info-card ul li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+        }
+
+        /* CARDS DOS PASSEIOS */
+        .tour-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 35px;
+            box-shadow: var(--card-shadow);
+            scroll-margin-top: 70px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .tour-header {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .tour-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--accent-color);
+        }
+
+        .tour-badge {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .tour-body {
+            padding: 20px;
+        }
+
+        .tour-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-weight: 600;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tour-price {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .tour-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .tour-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+        }
+
+        .tour-list li:last-child {
+            border-bottom: none;
+        }
+
+        .badge-senior {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-color);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.88rem;
+            margin-bottom: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* BOTÃO WHATSAPP */
+        .btn-whatsapp {
+            display: block;
+            width: 100%;
+            background: #25D366;
+            color: #fff;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1EBE5D;
+        }
+
+        /* FIXO NO RODAPÉ */
+        .footer-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--primary-color);
+            padding: 12px 20px;
+            text-align: center;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.5);
+            z-index: 999;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-custom {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .tour-header h2 { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO HEADER -->
+    <header class="hero">
+        <h1>TransferinCampos com Yuri</h1>
+        <p>Transfers Executivos, Passeios Exclusivos & Roteiros na Serra da Mantiqueira com Conforto e Segurança</p>
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO RÁPIDA -->
+    <nav class="nav-menu">
+        <a href="#transfers" class="nav-btn">✈️ Transfers</a>
+        <a href="#pico" class="nav-btn">🏔️ Rota do Pico</a>
+        <a href="#amantikir" class="nav-btn">🌸 Amantikir</a>
+        <a href="#vinicolas" class="nav-btn">🍷 Vinícolas</a>
+        <a href="#compras" class="nav-btn">🛍️ Compras</a>
+        <a href="#museus" class="nav-btn">🏛️ Cultura</a>
+        <a href="#pinhal" class="nav-btn">🌲 Sto Antônio</a>
+        <a href="#personalizado" class="nav-btn">✨ Monte o Seu</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- CARD INFORMAÇÕES DE RESERVA -->
+        <div class="info-card">
+            <h3>ℹ️ Informações sobre os Atendimentos</h3>
+            <ul>
+                <li>✅ <strong>Veículo Confortável:</strong> Atendimento privativo com Nissan Versa limpo, aromatizado e ar-condicionado.</li>
+                <li>💼 <strong>Pontualidade & Segurança:</strong> Motorista experiente na serra, focado em um trajeto tranquilo e sem pressa.</li>
+                <li>📲 <strong>Agendamento Direto:</strong> Fale direto comigo pelo WhatsApp para confirmar datas e alinharmos o roteiro.</li>
+            </ul>
+        </div>
+
+        <!-- SEÇÃO: TRANSFERS -->
+        <section id="transfers" class="tour-card">
+            <div class="tour-header">
+                <h2>Transfers Executivos & Aeroportos</h2>
+                <span class="tour-badge">Sob Consulta</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>📍 Regional, Capital & Litoral</span>
+                    <span class="tour-price">Orçamento Personalizado</span>
+                </div>
+                <ul class="tour-list">
+                    <li>✈️ Aeroportos de São Paulo (GRU / CGH / VCP)</li>
+                    <li>🏙️ São Paulo Capital & Região do Vale do Paraíba</li>
+                    <li>🙏 Transfers dedicados para Aparecida do Norte e Canção Nova</li>
+                    <li>🚘 Viagens particulares de média e longa distância</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Diferencial:</strong> Recepção pontual, auxílio com bagagens e suporte total durante o trajeto.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Gostaria%20de%20um%20orçamento%20para%20Transfer%20Executivo." class="btn-whatsapp">Consultar Valor do Transfer</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: ROTA DO PICO -->
+        <section id="pico" class="tour-card">
+            <div class="tour-header">
+                <h2>Rota do Pico (Vista Panorâmica)</h2>
+                <span class="tour-badge">Aprox. 3h</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>🚘 Carro Privativo (Nissan Versa)</span>
+                    <span class="tour-price">R$ 250,00</span>
+                </div>
+                <ul class="tour-list">
+                    <li>📍 Ducha de Prata</li>
+                    <li>📍 Mirante do Castelo</li>
+                    <li>📍 Lago Gelado</li>
+                    <li>📍 Pico do Itapeva (Acesso direto)</li>
+                    <li>📍 Lojas de Malhas de Fábrica</li>
+                    <li>📍 Fábrica de Chocolate Tradicional</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Experiência:</strong> Paradas contemplativas e pontos estratégicos com total comodidade.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Quero%20agendar%20a%20Rota%20do%20Pico%20(R$%20250)." class="btn-whatsapp">Reservar Rota do Pico (R$ 250)</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: AMANTIKIR -->
+        <section id="amantikir" class="tour-card">
+            <div class="tour-header">
+                <h2>Rota Amantikir & Jardinagem</h2>
+                <span class="tour-badge">Aprox. 4h30 / 5h</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>🚘 Carro Privativo</span>
+                    <span class="tour-price">R$ 400,00</span>
+                </div>
+                <ul class="tour-list">
+                    <li>📍 Parque Amantikir (Jardins contemplativos)</li>
+                    <li>📍 Café & Confeitaria Sans Souci</li>
+                    <li>📍 Fábrica de Chocolate</li>
+                    <li>📍 Lago Gelado & Pico do Itapeva</li>
+                    <li>📍 Lojas de Malhas de Fábrica</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Experiência:</strong> Ritmo leve e sem pressa para aproveitar os jardins e cafeterias da região.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Quero%20agendar%20a%20Rota%20Amantikir%20(R$%20400)." class="btn-whatsapp">Reservar Rota Amantikir (R$ 400)</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: VINÍCOLAS E AZEITES -->
+        <section id="vinicolas" class="tour-card">
+            <div class="tour-header">
+                <h2>Rota das Vinícolas & Azeites Artesanais</h2>
+                <span class="tour-badge">Aprox. 5h / 6h</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>🍷 Degustação & Paisagens</span>
+                    <span class="tour-price">A partir de R$ 500,00</span>
+                </div>
+                <ul class="tour-list">
+                    <li>📍 Vinícola Santa Maria ou Vinícola Essenza</li>
+                    <li>📍 <strong>Azeite Sabiá:</strong> Vivência nos olivais</li>
+                    <li>📍 <strong>OLIQ Azeites:</strong> Degustação guiada</li>
+                    <li>📍 Vinícola Raízes do Baú</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Experiência:</strong> Roteiro enogastronômico de altitude com paradas confortáveis.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Tenho%20interesse%20na%20Rota%20das%20Vinícolas%20e%20Azeites%20(a%20partir%20de%20R$%20500)." class="btn-whatsapp">Reservar Rota de Azeites & Vinhos</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: COMPRAS -->
+        <section id="compras" class="tour-card">
+            <div class="tour-header">
+                <h2>Roteiro Leve de Compras & Sabores</h2>
+                <span class="tour-badge">Aprox. 3h30</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>🛍️ Comodidade no Capivari</span>
+                    <span class="tour-price">R$ 200,00</span>
+                </div>
+                <ul class="tour-list">
+                    <li>📍 Centrinho do Capivari (Vila gastronômica)</li>
+                    <li>📍 Ducha de Prata (Artesanato)</li>
+                    <li>📍 Lojas de Fábrica de Malhas e Lãs</li>
+                    <li>📍 Fábrica de Chocolates Artesanais</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Experiência:</strong> Apoio com as sacolas e estacionamento facilitado próximo às lojas.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Quero%20agendar%20o%20Roteiro%20de%20Compras%20(R$%20200)." class="btn-whatsapp">Reservar Roteiro de Compras (R$ 200)</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: MUSEUS E CULTURA -->
+        <section id="museus" class="tour-card">
+            <div class="tour-header">
+                <h2>Museus, Cultura & Espiritualidade</h2>
+                <span class="tour-badge">Aprox. 4h</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>🏛️ Arte & História na Serra</span>
+                    <span class="tour-price">R$ 300,00</span>
+                </div>
+                <ul class="tour-list">
+                    <li>📍 Palácio Boa Vista</li>
+                    <li>📍 Museu Felícia Leirner & Auditório Cláudio Santoro</li>
+                    <li>📍 Mosteiro de São João (Cântico das Monjas)</li>
+                    <li>📍 Museu Casa da Xilogravura</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Experiência:</strong> Roteiro cultural tranquilo em ambientes arborizados e históricos.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Quero%20agendar%20o%20Roteiro%20Cultural%20(R$%20300)." class="btn-whatsapp">Reservar Roteiro Cultural (R$ 300)</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: SANTO ANTÔNIO DO PINHAL -->
+        <section id="pinhal" class="tour-card">
+            <div class="tour-header">
+                <h2>Santo Antônio do Pinhal (Charme da Serra)</h2>
+                <span class="tour-badge">Aprox. 5h</span>
+            </div>
+            <div class="tour-body">
+                <div class="tour-meta">
+                    <span>⛰️ Panoramas & Estação</span>
+                    <span class="tour-price">R$ 400,00</span>
+                </div>
+                <ul class="tour-list">
+                    <li>📍 Estação Eugênio Lefèvre & Café da Estação</li>
+                    <li>📍 Azeite Sabiá (Degustação premiada)</li>
+                    <li>📍 Mirante do Cruzeiro & Igreja Matriz</li>
+                    <li>📍 A Bodega & Lojas de Artesanato</li>
+                    <li>📍 Pico Agudo (Vista panorâmica)</li>
+                </ul>
+                <div class="badge-senior">
+                    <strong>Experiência:</strong> Passeio encantador pelas cidades vizinhas com total segurança na estrada.
+                </div>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Quero%20conhecer%20Santo%20Antônio%20do%20Pinhal%20(R$%20400)." class="btn-whatsapp">Reservar Santo Antônio do Pinhal (R$ 400)</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: MONTE O SEU -->
+        <section id="personalizado" class="tour-card" style="border: 2px solid var(--accent-color);">
+            <div class="tour-header" style="background: var(--accent-color); color: var(--primary-color);">
+                <h2 style="color: var(--primary-color);">✨ Monte Seu Roteiro Personalizado</h2>
+                <span class="tour-badge" style="background: var(--primary-color); color: #fff;">Exclusivo</span>
+            </div>
+            <div class="tour-body">
+                <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-light);">Quer montar uma rota sob medida combinando passeios, restaurantes ou viagens para cidades vizinhas? Fale diretamente comigo:</p>
+                <ul class="tour-list">
+                    <li>🌿 <strong>Natureza:</strong> Amantikir, Bosque do Silêncio, Pico do Itapeva</li>
+                    <li>🍷 <strong>Sabores:</strong> Azeites Sabiá/OLIQ, Vinícolas, Chocolaterias</li>
+                    <li>🏛️ <strong>Cultura & Cidades:</strong> Palácio, Mosteiro, S. Bento do Sapucaí, Itajubá</li>
+                    <li>🚗 <strong>Seu Destino:</strong> Me diga onde quer ir e eu traço a melhor rota</li>
+                </ul>
+                <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Quero%20montar%20um%20roteiro%20personalizado." class="btn-whatsapp" style="background: var(--accent-color); color: var(--primary-color);">Falar com o Yuri no WhatsApp</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- RODAPÉ FIXO DE AÇÃO -->
+    <div class="footer-cta">
+        <a href="https://wa.me/5511921738065?text=Olá,%20Yuri!%20Gostaria%20de%20informações%20sobre%20seus%20serviços." class="btn-custom">💬 Falar com Yuri Motorista</a>
+    </div>
+
+    <!-- JAVASCRIPT PARA MENU STICKY ATIVO -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navBtns = document.querySelectorAll('.nav-btn');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navBtns.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href').includes(current)) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -38,7 +38,7 @@
     <!-- HEADER / NAVBAR -->
     <header class="sticky top-0 z-50 bg-white border-b-4 border-chumbo shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
-            <div class="flex flex-col justify-center">
+            <div class="flex flex-col justify-center flex-shrink-0">
                 <a href="index.html" class="flex items-baseline">
                     <span class="font-serif text-2xl sm:text-3xl font-extrabold text-chumbo tracking-tight">
                         SEMPRE PERTO<span class="text-terracota font-sans font-extrabold text-xl sm:text-2xl ml-1">60+</span> <span class="text-verde-musgo font-serif font-extrabold text-2xl sm:text-3xl">SÊNIOR</span>
@@ -48,17 +48,18 @@
                     Cuidado e Longevidade com Autonomia
                 </span>
             </div>
-            <!-- ESTRUTURA DE LINKS ATUALIZADA -->
-            <nav class="hidden md:flex items-center gap-6 text-sm lg:text-base font-bold uppercase tracking-wider text-chumbo">
-                <a href="#servicos" class="hover:text-terracota transition-colors">Serviços</a>
-                <a href="consultas.html" class="hover:text-terracota transition-colors">Consultas</a>
-                <a href="transfer.html" class="hover:text-terracota transition-colors">Viagens & Passeios</a>
-                <a href="suporte-domiciliar.html" class="hover:text-terracota transition-colors">Suporte Domiciliar</a>
+
+            <!-- NAVEGAÇÃO CORRIGIDA PARA DESKTOP (SEM QUEBRA DE LINHA E SEM "SERVIÇOS") -->
+            <nav class="hidden md:flex items-center gap-5 lg:gap-8 text-xs lg:text-sm font-bold uppercase tracking-wider text-chumbo">
+                <a href="consultas.html" class="hover:text-terracota transition-colors whitespace-nowrap">Consultas</a>
+                <a href="transfer.html" class="hover:text-terracota transition-colors whitespace-nowrap">Viagens & Passeios</a>
+                <a href="suporte-domiciliar.html" class="hover:text-terracota transition-colors whitespace-nowrap">Suporte Domiciliar</a>
             </nav>
-            <div>
+
+            <div class="flex-shrink-0">
                 <a href="https://wa.me/5512991845196?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Sempre%20Perto%20S%C3%AAnior." 
                    target="_blank"
-                   class="bg-verde-musgo text-white px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base font-bold uppercase hover:bg-terracota transition-all duration-300 inline-flex items-center gap-2 rounded-sm shadow-sm">
+                   class="bg-verde-musgo text-white px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base font-bold uppercase hover:bg-terracota transition-all duration-300 inline-flex items-center gap-2 rounded-sm shadow-sm whitespace-nowrap">
                     <i class="fa-brands fa-whatsapp text-xl text-emerald-300"></i> (12) 99184-5196
                 </a>
             </div>
@@ -93,7 +94,7 @@
                         <i class="fa-solid fa-person-cane text-5xl sm:text-6xl text-terracota"></i>
                         <h2 class="font-serif text-2xl sm:text-3xl font-extrabold text-chumbo">Segurança e Dignidade</h2>
                         <p class="text-base sm:text-lg text-dark-text font-semibold leading-relaxed">
-                            Nós não fazemos apenas transporte. Oferecemos um ecossistema completo de suporte para idosos ativos ou com limitations, cobrindo exames, viagens e gestão residencial.
+                            Nós não fazemos apenas transporte. Oferecemos um ecossistema completo de suporte para idosos ativos ou com limitações, cobrindo exames, viagens e gestão residencial.
                         </p>
                     </div>
                 </div>
@@ -226,7 +227,7 @@
         </div>
     </section>
 
-    <!-- NOVO QUADRO COMPLETO: SOLUÇÕES DOMICILIARES (IGUAL AO PRINT) -->
+    <!-- QUADRO COMPLETO: SOLUÇÕES DOMICILIARES -->
     <section id="suporte-quadro" class="py-16 bg-white border-b-4 border-chumbo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
@@ -234,12 +235,12 @@
                 <h2 class="font-serif text-3xl sm:text-4xl text-verde-musgo font-extrabold">Soluções Domiciliares & Acompanhamento</h2>
             </div>
 
-            <!-- GRADE DE 4 CARDS IDÊNTICA À IMAGEM FORNECIDA -->
+            <!-- GRADE DE 4 CARDS -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <!-- CARD 1: ACOMPANHAMENTO MÉDICO (DESTAQUE COM TAG MAIS SOLICITADO) -->
+                <!-- CARD 1: ACOMPANHAMENTO MÉDICO -->
                 <div class="bg-areia p-6 border-4 border-terracota flex flex-col justify-between hover:shadow-2xl transition-all duration-300 relative">
-                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-terracota text-white text-[10px] font-bold px-3 py-1 uppercase tracking-wider">Mais Solicitado</span>
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-terracota text-white text-[10px] font-bold px-3 py-1 uppercase tracking-wider whitespace-nowrap">Mais Solicitado</span>
                     <div class="space-y-4">
                         <div class="w-12 h-12 bg-terracota text-white flex items-center justify-center text-xl border-2 border-chumbo">
                             <i class="fa-solid fa-user-doctor"></i>
@@ -369,7 +370,7 @@
                 <p class="text-xs text-chumbo/80 mt-0.5">Cuidado e Longevidade com Autonomia</p>
                 <p class="text-xs text-gray-500 mt-2">© 2026 Sempre Perto 60+ Sênior. Todos os direitos reservados.</p>
             </div>
-            <!-- RODAPÉ COM A MESMA ESTRUTURA DOS LINKS -->
+            <!-- RODAPÉ AJUSTADO SEM "SERVIÇOS" -->
             <div class="flex flex-wrap justify-center gap-6 text-sm uppercase tracking-wider font-bold text-chumbo">
                 <a href="consultas.html" class="hover:text-terracota">Consultas</a>
                 <a href="transfer.html" class="hover:text-terracota">Viagens & Passeios</a>

@@ -31,51 +31,65 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; } /* Evita rolagem lateral indesejada no mobile */
     </style>
 </head>
 <body class="bg-white text-dark-text font-sans antialiased">
 
-    <!-- HEADER / NAVBAR -->
+    <!-- HEADER / NAVBAR AJUSTADO PARA MOBILE E DESKTOP -->
     <header class="sticky top-0 z-50 bg-white border-b-4 border-chumbo shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
-            <div class="flex flex-col justify-center flex-shrink-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-0 sm:h-24 flex items-center justify-between gap-2">
+            
+            <!-- LOGO -->
+            <div class="flex flex-col justify-center max-w-[70%] sm:max-w-none">
                 <a href="index.html" class="flex items-baseline">
-                    <span class="font-serif text-2xl sm:text-3xl font-extrabold text-chumbo tracking-tight">
-                        SEMPRE PERTO<span class="text-terracota font-sans font-extrabold text-xl sm:text-2xl ml-1">60+</span> <span class="text-verde-musgo font-serif font-extrabold text-2xl sm:text-3xl">SÊNIOR</span>
+                    <span class="font-serif text-lg sm:text-2xl lg:text-3xl font-extrabold text-chumbo tracking-tight leading-none">
+                        SEMPRE PERTO<span class="text-terracota font-sans font-extrabold text-base sm:text-xl lg:text-2xl ml-0.5">60+</span> <span class="text-verde-musgo font-serif font-extrabold text-lg sm:text-2xl lg:text-3xl">SÊNIOR</span>
                     </span>
                 </a>
-                <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-chumbo/80 -mt-1">
+                <span class="text-[8px] sm:text-xs font-semibold uppercase tracking-wider text-chumbo/80 mt-0.5 sm:mt-0">
                     Cuidado e Longevidade com Autonomia
                 </span>
             </div>
 
-            <!-- NAVEGAÇÃO CORRIGIDA PARA DESKTOP (SEM QUEBRA DE LINHA E SEM "SERVIÇOS") -->
+            <!-- NAVEGAÇÃO DESKTOP -->
             <nav class="hidden md:flex items-center gap-5 lg:gap-8 text-xs lg:text-sm font-bold uppercase tracking-wider text-chumbo">
                 <a href="consultas.html" class="hover:text-terracota transition-colors whitespace-nowrap">Consultas</a>
                 <a href="transfer.html" class="hover:text-terracota transition-colors whitespace-nowrap">Viagens & Passeios</a>
                 <a href="suporte-domiciliar.html" class="hover:text-terracota transition-colors whitespace-nowrap">Suporte Domiciliar</a>
             </nav>
 
+            <!-- BOTÃO WHATSAPP RESPONSIVO (COMPACTO NO MOBILE, COMPLETO NO PC) -->
             <div class="flex-shrink-0">
                 <a href="https://wa.me/5512991845196?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Sempre%20Perto%20S%C3%AAnior." 
                    target="_blank"
-                   class="bg-verde-musgo text-white px-4 py-3 text-sm sm:px-6 sm:py-4 sm:text-base font-bold uppercase hover:bg-terracota transition-all duration-300 inline-flex items-center gap-2 rounded-sm shadow-sm whitespace-nowrap">
-                    <i class="fa-brands fa-whatsapp text-xl text-emerald-300"></i> (12) 99184-5196
+                   class="bg-verde-musgo text-white p-2.5 sm:px-5 sm:py-3.5 text-xs sm:text-sm font-bold uppercase hover:bg-terracota transition-all duration-300 inline-flex items-center gap-2 rounded-sm shadow-sm whitespace-nowrap">
+                    <i class="fa-brands fa-whatsapp text-lg sm:text-xl text-emerald-300"></i>
+                    <span class="hidden sm:inline">(12) 99184-5196</span>
                 </a>
             </div>
+        </div>
+
+        <!-- BARRA DE NAVEGAÇÃO RÁPIDA EXCLUSIVA PARA CELULAR -->
+        <div class="md:hidden bg-areia border-t border-chumbo/20 py-2 px-4 flex justify-around text-[11px] font-bold uppercase text-chumbo">
+            <a href="consultas.html" class="hover:text-terracota">Consultas</a>
+            <span class="text-chumbo/30">|</span>
+            <a href="transfer.html" class="hover:text-terracota">Viagens & Passeios</a>
+            <span class="text-chumbo/30">|</span>
+            <a href="suporte-domiciliar.html" class="hover:text-terracota">Suporte</a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative bg-areia py-12 lg:py-20 border-b-4 border-chumbo">
+    <section class="relative bg-areia py-10 lg:py-20 border-b-4 border-chumbo">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6 sm:space-y-8">
                     <span class="bg-chumbo text-areia px-3 py-1.5 text-xs sm:text-sm font-bold tracking-widest uppercase inline-block">Apoio Exclusivo para a Terceira Idade</span>
-                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-chumbo leading-tight font-extrabold">
+                    <h1 class="font-serif text-2xl sm:text-4xl lg:text-5xl text-chumbo leading-tight font-extrabold">
                         Transporte Especializado, Acompanhamento e Suporte Domiciliar.
                     </h1>
-                    <p class="text-dark-text text-lg sm:text-xl font-semibold leading-relaxed max-w-2xl">
+                    <p class="text-dark-text text-base sm:text-xl font-semibold leading-relaxed max-w-2xl">
                         Você não pode acompanhar seus pais ao médico, realizar compras ou gerenciar o lar hoje? A Sempre Perto busca de carro, dá o braço firme para caminhar e cuida da gestão da casa com total carinho e paciência.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 pt-2">
@@ -107,14 +121,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
                 <span class="text-terracota text-base sm:text-lg font-extrabold tracking-widest uppercase">A Escolha Inteligente</span>
-                <h2 class="font-serif text-3xl sm:text-4xl text-chumbo font-extrabold">Por que não usar um Uber ou Táxi comum para idosos?</h2>
+                <h2 class="font-serif text-2xl sm:text-4xl text-chumbo font-extrabold">Por que não usar um Uber ou Táxi comum para idosos?</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Coluna Uber / Táxi -->
                 <div class="bg-red-50 p-6 sm:p-8 border-4 border-red-300 space-y-6">
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-red-900 text-center"><i class="fa-solid fa-circle-xmark mr-2"></i> Uber ou Táxi Comum</h3>
-                    <ul class="space-y-4 text-base sm:text-lg text-dark-text font-semibold">
+                    <h3 class="font-serif text-xl sm:text-3xl font-bold text-red-900 text-center"><i class="fa-solid fa-circle-xmark mr-2"></i> Uber ou Táxi Comum</h3>
+                    <ul class="space-y-4 text-sm sm:text-lg text-dark-text font-semibold">
                         <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Deixam o idoso sozinho na calçada, exposto ao sol e chuva.</li>
                         <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Não ajudam a caminhar, carregar sacolas ou entrar em consultórios.</li>
                         <li class="flex items-start"><i class="fa-solid fa-times text-red-600 mr-3 mt-1 flex-shrink-0"></i> Cancelamentos frequentes em cima da hora, gerando ansiedade e perda de consultas.</li>
@@ -124,8 +138,8 @@
 
                 <!-- Coluna Sempre Perto -->
                 <div class="bg-areia p-6 sm:p-8 border-4 border-verde-musgo space-y-6">
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-verde-musgo text-center"><i class="fa-solid fa-circle-check mr-2"></i> Sempre Perto 60+ Sênior</h3>
-                    <ul class="space-y-4 text-base sm:text-lg text-dark-text font-bold">
+                    <h3 class="font-serif text-xl sm:text-3xl font-bold text-verde-musgo text-center"><i class="fa-solid fa-circle-check mr-2"></i> Sempre Perto 60+ Sênior</h3>
+                    <ul class="space-y-4 text-sm sm:text-lg text-dark-text font-bold">
                         <li class="flex items-start"><i class="fa-solid fa-check text-verde-musgo mr-3 mt-1 flex-shrink-0"></i> Suporte porta a porta completo. Buscamos de braço dado dentro de casa.</li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-verde-musgo mr-3 mt-1 flex-shrink-0"></i> Entramos na clínica, preenchemos guias, carregamos compras e fazemos companhia ativa.</li>
                         <li class="flex items-start"><i class="fa-solid fa-check text-verde-musgo mr-3 mt-1 flex-shrink-0"></i> Agendamento prévio garantido. Sem atrasos ou cancelamentos surpresa.</li>
@@ -141,7 +155,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-4 mb-8 sm:mb-12">
                 <span class="text-terracota text-base sm:text-lg font-bold tracking-widest uppercase">Atendimento na Rua & Saúde</span>
-                <h2 class="font-serif text-3xl sm:text-4xl text-chumbo font-extrabold">Acompanhamento e Mobilidade</h2>
+                <h2 class="font-serif text-2xl sm:text-4xl text-chumbo font-extrabold">Acompanhamento e Mobilidade</h2>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -152,7 +166,7 @@
                             <i class="fa-solid fa-user text-2xl"></i>
                         </div>
                         <h3 class="font-serif text-xl sm:text-2xl text-chumbo font-bold">Concierge Sênior Solo</h3>
-                        <p class="text-dark-text font-semibold leading-relaxed text-base sm:text-lg">
+                        <p class="text-dark-text font-semibold leading-relaxed text-base">
                             <strong>Um motorista de confiança que serve como assistente pessoal.</strong> Ideal para idosos ativos que querem ir ao supermercado, banco, salão de beleza ou realizar consultas de rotina.
                         </p>
                     </div>
@@ -170,7 +184,7 @@
                             <i class="fa-solid fa-users text-2xl"></i>
                         </div>
                         <h3 class="font-serif text-xl sm:text-2xl text-chumbo font-bold">Assistência Premium (A Dupla)</h3>
-                        <p class="text-dark-text font-semibold leading-relaxed text-base sm:text-lg">
+                        <p class="text-dark-text font-semibold leading-relaxed text-base">
                             <strong>Um motorista e uma acompanhante dedicada de bordo.</strong> Desenhado para idosos com mobilidade reduzida ou consultas complexas. Acompanhante oferece o braço, resolve fichas e acolhe.
                         </p>
                     </div>
@@ -188,7 +202,7 @@
                             <i class="fa-solid fa-hospital text-2xl"></i>
                         </div>
                         <h3 class="font-serif text-xl sm:text-2xl text-chumbo font-bold">Apoio Hospitalar</h3>
-                        <p class="text-dark-text font-semibold leading-relaxed text-base sm:text-lg">
+                        <p class="text-dark-text font-semibold leading-relaxed text-base">
                             <strong>Companhia e auxílio em exames, pós-operatórios e internações.</strong> Nosso profissional faz companhia ativa na poltrona do quarto, auxilia e atualiza a família.
                         </p>
                     </div>
@@ -208,8 +222,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
                     <span class="text-terracota text-base sm:text-lg font-bold tracking-widest uppercase">Mobilidade Ampliada</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl text-chumbo font-extrabold">Viagens & Passeios</h2>
-                    <p class="text-dark-text text-lg sm:text-xl font-semibold leading-relaxed">
+                    <h2 class="font-serif text-2xl sm:text-4xl text-chumbo font-extrabold">Viagens & Passeios</h2>
+                    <p class="text-dark-text text-base sm:text-xl font-semibold leading-relaxed">
                         Leve seus pais para aeroportos, viagens de família, visitas a parentes e passeios exclusivos na Serra da Mantiqueira ou Rota da Fé com total segurança e respeito ao tempo sênior.
                     </p>
                 </div>
@@ -217,7 +231,7 @@
                     <div class="bg-areia border-4 border-chumbo p-6 sm:p-8 space-y-6 shadow-md">
                         <i class="fa-solid fa-map-location-dot text-5xl text-terracota"></i>
                         <h3 class="font-serif text-xl sm:text-2xl text-chumbo font-bold">Roteiros & Transfers</h3>
-                        <p class="text-base sm:text-lg text-dark-text font-semibold">Transfers dedicados para aeroportos, hotéis e passeios privativos pela região.</p>
+                        <p class="text-base text-dark-text font-semibold">Transfers dedicados para aeroportos, hotéis e passeios privativos pela região.</p>
                         <a href="transfer.html" class="bg-verde-musgo text-white block text-center py-4 text-base font-bold uppercase hover:bg-terracota transition-all duration-300">
                             Conhecer Viagens & Passeios
                         </a>
@@ -232,7 +246,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
                 <span class="text-terracota text-xs sm:text-sm font-extrabold tracking-widest uppercase">Contratação Flexível e Sob Demanda</span>
-                <h2 class="font-serif text-3xl sm:text-4xl text-verde-musgo font-extrabold">Soluções Domiciliares & Acompanhamento</h2>
+                <h2 class="font-serif text-2xl sm:text-4xl text-verde-musgo font-extrabold">Soluções Domiciliares & Acompanhamento</h2>
             </div>
 
             <!-- GRADE DE 4 CARDS -->
@@ -345,16 +359,16 @@
 
     <!-- CALL TO ACTION FINAL -->
     <section class="bg-chumbo text-white py-12 text-center space-y-6 sm:space-y-8">
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight font-extrabold">
+        <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl max-w-3xl mx-auto leading-tight font-extrabold px-4">
             Dê ao seu familiar o carinho e a atenção que ele merece.
         </h2>
-        <p class="text-areia font-semibold max-w-xl mx-auto text-lg sm:text-xl">
+        <p class="text-areia font-semibold max-w-xl mx-auto text-base sm:text-xl px-4">
             Cuidamos de tudo para que você trabalhe com a mente tranquila. Agendamentos prévios com antecedência mínima de 24 horas.
         </p>
         <div>
             <a href="https://wa.me/5512991845196?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20bloco%20de%20atendimento%20para%20esta%20semana." 
                target="_blank"
-               class="bg-terracota text-white px-6 py-4 sm:px-8 sm:py-5 text-base sm:text-lg font-bold uppercase tracking-wider hover:bg-verde-musgo transition-all duration-300 inline-flex items-center gap-2 rounded-sm shadow-md">
+               class="bg-terracota text-white px-6 py-4 sm:px-8 sm:py-5 text-sm sm:text-lg font-bold uppercase tracking-wider hover:bg-verde-musgo transition-all duration-300 inline-flex items-center gap-2 rounded-sm shadow-md">
                 <i class="fa-brands fa-whatsapp text-2xl"></i> Chamar no (12) 99184-5196
             </a>
         </div>
@@ -363,14 +377,13 @@
     <!-- FOOTER -->
     <footer class="bg-white border-t-2 border-chumbo/30 py-12 text-base text-dark-text">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col">
+            <div class="flex flex-col text-center md:text-left">
                 <span class="font-serif text-2xl font-bold text-chumbo">
                     SEMPRE PERTO <span class="text-terracota font-sans font-bold text-xl">60+</span> <span class="text-verde-musgo font-serif font-bold text-2xl">SÊNIOR</span>
                 </span>
                 <p class="text-xs text-chumbo/80 mt-0.5">Cuidado e Longevidade com Autonomia</p>
-                <p class="text-xs text-gray-500 mt-2">© 2026 Sempre Perto 60+ Sênior. Todos os direitos reservados.</p>
+                <p class="text-xs text-gray-500 mt-2">&copy; 2026 Sempre Perto 60+ Sênior. Todos os direitos reservados.</p>
             </div>
-            <!-- RODAPÉ AJUSTADO SEM "SERVIÇOS" -->
             <div class="flex flex-wrap justify-center gap-6 text-sm uppercase tracking-wider font-bold text-chumbo">
                 <a href="consultas.html" class="hover:text-terracota">Consultas</a>
                 <a href="transfer.html" class="hover:text-terracota">Viagens & Passeios</a>
